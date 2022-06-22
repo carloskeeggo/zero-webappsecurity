@@ -14,6 +14,5 @@ steps:
 - task: CmdLine@2
   inputs:
     script: |
-      macrogenserver -u http://zero.webappsecurity.com/login.html -mu username -mp password -m C:\webinspect\zero\login.webmacro  
-      wi -u http://zero.webappsecurity.com/ -n "Scan no site http://zero.webappsecurity.com/" -CrawlCoverage Default -ps 1049 -macro C:\webinspect\zero\login.webmacro  -r "Aggregate;Executive Summary;Developer Reference" -y Standard -f "C:\webinspect\zero\report.pdf" -gp -ep "C:\webinspect\zero\output.fpr"
+      wi -u http://zero.webappsecurity.com/ -n "Scan no site http://zero.webappsecurity.com/" -CrawlCoverage Default -ps 1049 -macro C:\macro_teste.webmacro  -r "Aggregate;Executive Summary;Developer Reference" -y Standard -f "C:\webinspect\zero\report.pdf" -gp -ep "C:\webinspect\zero\output.fpr"
       fortifyclient -url https://34.193.130.215:8443/ssc -authtoken 8a88efe1-c17e-421c-9ffc-d6e8a08737ec uploadFPR -file "C:\webinspect\zero\output.fpr" -project "zerowebsecurity" -version zerowebsecurity-azure
