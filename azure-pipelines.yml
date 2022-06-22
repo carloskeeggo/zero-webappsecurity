@@ -15,4 +15,4 @@ steps:
   inputs:
     ScanSettings: 'zerowebappsecurity-quick-standard'
     APIRoot: 'http://34.193.130.215:8380/'
-    ScanResultsLocation: 'C:\Users\Administrator\Documents\webinspect\zero.fpr'
+    ScanResultsLocation: 'C:\Users\Administrator\Documents\webinspect'
