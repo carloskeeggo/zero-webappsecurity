@@ -12,9 +12,4 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'wi'
-
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: 'date'
+    script: 'cd "C:\Program Files\Fortify\Fortify WebInspect"'
