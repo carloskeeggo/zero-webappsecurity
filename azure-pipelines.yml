@@ -8,7 +8,7 @@ trigger:
 - main
 
 pool:
-  name: VM-AWS
+  name: VM-BSB
 
 steps:
 - task: CmdLine@2
