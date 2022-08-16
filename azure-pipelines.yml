@@ -12,4 +12,4 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
-    script: 'cd "C:\Program Files\Fortify\Fortify WebInspect"'
+    script: 'Invoke-RestMethod -Method "Post" -Uri "http://34.226.50.182:443/webinspect/api/v1/scanner/scans" -Body "{''settingsName'':''ScanSettingsZeroQuick''}" -Headers @{''Accept''= ''application/json''} -ContentType "application/json"'
