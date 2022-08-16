@@ -1,5 +1,4 @@
 # Starter pipeline
-
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -9,9 +8,9 @@ trigger:
 
 pool:
   name: VM-BSB
+steps:  
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'wi'
 
-
-     - task: PowerShell@2
-       inputs:
-         targetType: 'inline'
-         script: 'wi'
