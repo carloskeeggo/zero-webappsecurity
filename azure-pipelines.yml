@@ -10,9 +10,8 @@ trigger:
 pool:
   name: VM-BSB
 
-steps:
-- task: CmdLine@2
-  inputs:
-    script: |
-      wi -u http://zero.webappsecurity.com/ -n "Scan no site http://zero.webappsecurity.com/" -CrawlCoverage Default -ps 1049 -macro C:\macro_teste.webmacro  -r "Aggregate;Executive Summary;Developer Reference" -y Standard -f "C:\Users\Administrator\Documents\WebInspect\zero-azure\report.pdf" -gp -ep "C:\Users\Administrator\Documents\WebInspect\zero-azure\output.fpr"
-      fortifyclient -url https://34.226.50.182:8443/ssc -authtoken 083332a2-ebf2-4453-926d-abbc0b6baf6b uploadFPR -file "C:\Users\Administrator\Documents\WebInspect\zero-azure\output.fpr" -project "zerowebsecurity" -version zerowebsecurity-azure
+
+     - task: PowerShell@2
+       inputs:
+         targetType: 'inline'
+         script: 'wi'
